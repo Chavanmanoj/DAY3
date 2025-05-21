@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Manoj Chavan - Portfolio, Education, Goals, Achievements" />
+  <meta name="author" content="Manoj Chavan" />
+  <meta property="og:title" content="Manoj Chavan Portfolio" />
+  <meta property="og:image" content="images.jpg" />
+  <meta property="og:description" content="Personal introduction portfolio site." />
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>Manoj's Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="sastyle.css" />
+</head>
+<body>
+
+  <!-- Loading Spinner -->
+  <div id="loading-spinner">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm Manoj Chavan — Building the future, one line of code at a time.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#goals">Goals</a>
+      <a href="#personal">Personal</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section id="welcome">
+    <h2>This is Manoj Chavan</h2>
+    <img src="images.jpg" alt="Manoj Chavan smiling in front of a wall" class="profile-pic">
+    <p style="text-align:center;">I’m <strong>Manoj Chavan</strong>, passionate about solving real-world problems through creative code and bold ideas.</p>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <ul>
+      <li><strong>Name:</strong> Manoj Chavan</li>
+      <li><strong>Location:</strong> Boisar, Maharashtra</li>
+      <li><strong>Education:</strong> St. John College of Engineering</li>
+      <li><strong>Languages:</strong> C, SQL, Python, HTML, CSS, JS, React</li>
+    </ul>
+  </section>
+
+  <!-- Video -->
+  <section id="video">
+    <h2>Video</h2>
+    <div class="video-container">
+      <iframe width="700" height="300" src="https://www.youtube.com/embed/UeC9-5o22aU" title="Mumbai City Tour" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Intern at Raw Engineering</li>
+      <li>2nd Prize - PPT Competition</li>
+    </ul>
+  </section>
+
+  <!-- Projects (from data.json) -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="project-list">
+      <!-- Fetched JSON content will go here -->
+    </div>
+  </section>
+
+  <!-- Goals -->
+  <section id="goals">
+    <h2>Future Goals</h2>
+    <p>I want to become a full-stack developer and build tech that solves real problems.</p>
+  </section>
+
+  <!-- Personal -->
+  <section id="personal">
+    <h2>More About Me</h2>
+    <ul>
+      <li><strong>Hobbies:</strong> Reading, Coding, Cricket</li>
+      <li><strong>Role Model:</strong> Myself</li>
+      <li><strong>Book:</strong> Atomic Habits</li>
+    </ul>
+  </section>
+
+  <!-- Location -->
+  <section id="location">
+    <h2>My Location</h2>
+    <p>Currently located in Boisar, Palghar, Maharashtra, India.</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="submit_form.php" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Contact Links -->
+  <section id="contact-links">
+    <h2>Contact Links</h2>
+    <div class="button-group">
+      <a href="mailto:123manoj2129@sjcem.edu.in">📧 Email Me</a>
+      <a href="https://github.com/Chavanmanoj" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <a id="back-to-top" href="#welcome">⬆</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Manoj Chavan |
+      <a href="mailto:123manoj2129@sjcem.edu.in">Email</a> |
+      <a href="https://github.com/Chavanmanoj" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Loading animation
+    window.addEventListener('load', () => {
+      document.getElementById('loading-spinner').style.display = 'none';
+    });
+
+    // Hamburger menu toggle
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+
+    // Scroll-to-top visibility
+    window.addEventListener('scroll', () => {
+      document.getElementById('back-to-top').style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    // Fetch JSON data
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => {
+        const projectContainer = document.getElementById('project-list');
+        data.projects.forEach(project => {
+          const projectEl = document.createElement('div');
+          projectEl.innerHTML = `<h3>${project.title}</h3><p>${project.description}</p>`;
+          projectEl.style.marginBottom = '1.5em';
+          projectContainer.appendChild(projectEl);
+        });
+      });
+  </script>
+</body>
+</html>
